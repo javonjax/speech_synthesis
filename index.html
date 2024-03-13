@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pacifico'>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='60' 
+    height='600' viewBox='0 0 20 20'><text x='0' y='16'>🗣️</text></svg>"/>
+    <title>Text to Speech</title>
+</head>
+<body>
+    
+    <div class="tts-container">
+        <h1>Text to Speech</h1>
+
+        <select name="voice" id="voices">
+            <option value="">Select a voice</option>
+        </select>
+        <select name="lang" id="languages">
+            <option value="">Filter by language</option>
+        </select>
+
+        <label for="speed">Speed:</label>
+        <input name="speed" type="range" list="speedticks" min="0.5" max="4" value="1" step="0.5"/>
+        <datalist id="speedticks">
+            <option value="0.5" label="0.5x"></option>
+            <option value="1.0" label="1x"></option>
+            <option value="1.5" label="1.5x"></option>
+            <option value="2.0" label="2x"></option>
+            <option value="2.5" label="2.5x"></option>
+            <option value="3.0" label="3x"></option>
+            <option value="3.5" label="3.5x"></option>
+            <option value="4.0" label="4x"></option>
+        </datalist>
+
+        <label for="pitch">Pitch:</label>
+        <input name="pitch" type="range" min="0" max="2" value="1" step="0.1"/>
+        <!--#TODO: add pitch slider datalist-->
+        
+        <textarea name="text">Hello! Tell me what to say!</textarea>
+
+        <div class="button-container">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+        </div>
+            
+    </div>
+</body>
+</html>
